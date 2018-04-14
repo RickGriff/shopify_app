@@ -1,8 +1,18 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
+    @products = ShopifyAPI::Product.find(:all)
+    @orders = ShopifyAPI::Order.find(:all)
+    @checkouts = ShopifyAPI::Checkout.find(:all)
+    @script_tags = ShopifyAPI::ScriptTag.find(:all)
   end
-
+ 
   def modal
+  end
+  
+  def first_script_tag
+    respond_to do |format|
+      format.js
+    end
   end
 
   def modal_buttons

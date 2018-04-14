@@ -18,8 +18,24 @@
 <% end %>
 
 <h2>Shopify Embedded Example.</h2>
-
 <p>This application demos the various ways an app can now interact with the Shopify Admin. See the project README for details.</p>
+
+<h2>List of all products</h2>
+<% @products.each do |product| %>
+  <%= product.title %>
+<% end %>
+
+<h2>List of all orders</h2>
+<% @orders.each do |order| %>
+  <%= order.title %>
+<% end %>
+
+<h2>List of all ScriptTags</h2>
+<% @script_tags.each do |script_tag| %>
+  <%= script_tag.id %>
+<% end %>
+
+
 
 <p><a href="regular_app_page">Links to another page</a> work normally.</p>
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount ShopifyApp::Engine, at: '/'
-
+  get '/scriptag/first_script_tag' => 'home#first_script_tag'
   get 'modal' => "home#modal", :as => :modal
   get 'modal_buttons' => "home#modal_buttons", :as => :modal_buttons
   get 'regular_app_page' => "home#regular_app_page"
