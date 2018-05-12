@@ -2,7 +2,7 @@ ShopifyApp.configure do |config|
   config.application_name = 'Example App'
   config.api_key = ENV['SHOPIFY_CLIENT_API_KEY']
   config.secret = ENV['SHOPIFY_CLIENT_API_SECRET']
-  config.scope = 'read_customers, read_orders, write_products, write_script_tags, read_script_tags'
+  config.scope ='write_price_rules, read_customers, read_orders, write_products, write_script_tags'
   config.embedded_app = true
   config.session_repository = Shop
   # Set the ScriptTags for the app - enable it to modify storefront views.  ScripTag JS files hosted on GDrive for development.
