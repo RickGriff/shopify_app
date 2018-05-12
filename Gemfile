@@ -1,6 +1,27 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-# Specify your gem's dependencies in shopify_app.gemspec
-gemspec
+gem 'rails', '~> 5.0.0'
+gem 'pg'
 
-gem 'rails-controller-testing', group: :test
+gem 'dotenv-rails'
+gem 'shopify_app', '~> 8.0.0'
+gem 'shopify_cli'
+
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+
+group :development do
+  gem 'pry-rails'
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'sqlite3'
+end
+
+gem 'rails_12factor', group: :production
+
+
